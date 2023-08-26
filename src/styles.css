@@ -1,0 +1,107 @@
+/*I have used a local ttf file to load the font, you can use any font you wish*/
+@font-face {
+    font-family: "louisGeorge";
+    src: url("../public/fonts/LouisGeorgeCafe.ttf");
+}
+
+html {
+    background-color: #D9D9D9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'louisGeorge';
+}
+
+.nowPlayingCard {
+    flex-shrink: 0;
+    border-radius: 22px;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.nowPlayingCard:hover {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+    transform: translateX(-10px) translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+  
+.nowPlayingCard a {
+    color: black;
+    text-decoration: none;
+}
+
+.nowPlayingCard a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.nowPlayingImage img {
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin: 10px;
+}
+
+.nowPlayingImage img:hover {
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+    transform: translateX(-3px) translateY(-3px);
+    transition: all 0.5s ease;
+}
+
+#nowPlayingDetails {
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 54%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 54%;
+    height: 100%;
+}
+
+.nowPlayingTitle, .playlistName {
+    flex-shrink: 0;
+    color: #000;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+.nowPlayingArtist, .playlistHeader {
+    text-align: left;
+    flex-shrink: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.nowPlayingTime {
+    text-align: left;
+}
+
+.nowPlayingState {
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+}
+
+.nowPlayingState img{
+    filter: invert(100%);
+    width: 100%;
+}
